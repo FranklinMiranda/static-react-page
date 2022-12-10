@@ -1,4 +1,17 @@
 // This is an example of a simple functional component created and then rendered using a self-closing tag and the render method
+const Navbar = () => {
+  return (
+    <nav className="navigation">
+      <h1>Franklin's Website</h1>
+      <ul>
+        <li>Pricing</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+  );
+};
+
 const MainContent = () => {
   return (
     <div>
@@ -14,6 +27,7 @@ const MainContent = () => {
   );
 };
 
+// This is a simple functional component
 const SimpleComponent = () => {
   return (
     <table>
@@ -34,10 +48,11 @@ const SimpleComponent = () => {
 };
 
 // This JSX element can be rendered inserting it into the render method using {} curly brackets
-const page = <h1>This is a JSX Element</h1>
+const page = <h1>This is a JSX Element</h1>;
 
 ReactDOM.render(
   <div>
+    <Navbar />
     <MainContent />
     <SimpleComponent />
     {page}
@@ -45,16 +60,14 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-
 // Imperative Example of creating a h1 tag on the webpage
- const h1 = document.createElement('h1')
- h1.textContent = "This is an imperative way to program"
- h1.className = 'header'
- document.getElementById('root').append(h1)
+//  const h1 = document.createElement('h1')
+//  h1.textContent = "This is an imperative way to program"
+//  h1.className = 'header'
+//  document.getElementById('root').append(h1)
 
-
- // JSX is JavaScript XML was created to use with React to be able to write HTML directly in JavaScript
- // JSX creates a JavaScript object that is then passed to React to render as HTML
- //const jsxElement = <h1 className="header">This is JSX</h1>
- //console.log(jsxElement)
- // Some differences are using className instead of class 
+//  JSX is JavaScript XML was created to use with React to be able to write HTML directly in JavaScript
+// JSX creates a JavaScript object that is then passed to React to render as HTML
+//const jsxElement = <h1 className="header">This is JSX</h1>
+//console.log(jsxElement)
+// Some differences are using className instead of class
