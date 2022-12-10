@@ -47,3 +47,10 @@ ReactDOM.render(
  h1.textContent = "This is an imperative way to program"
  h1.className = 'header'
  document.getElementById('root').append(h1)
+
+
+ // JSX is JavaScript XML was created to use with React to be able to write HTML directly in JavaScript
+ // JSX creates a JavaScript object that is then passed to React to render as HTML
+ //const jsxElement = <h1 className="header">This is JSX</h1>
+ //console.log(jsxElement)
+ // Some differences are using className instead of class 
