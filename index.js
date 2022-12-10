@@ -50,24 +50,35 @@ const SimpleComponent = () => {
 // This JSX element can be rendered inserting it into the render method using {} curly brackets
 const page = <h1>This is a JSX Element</h1>;
 
-ReactDOM.render(
-  <div>
-    <Navbar />
-    <MainContent />
-    <SimpleComponent />
-    {page}
-  </div>,
-  document.getElementById('root')
-);
-
 // Imperative Example of creating a h1 tag on the webpage
-//  const h1 = document.createElement('h1')
-//  h1.textContent = "This is an imperative way to program"
-//  h1.className = 'header'
-//  document.getElementById('root').append(h1)
+ const h1 = document.createElement('h1')
+ h1.textContent = "This is an imperative way to program"
+ h1.className = 'header'
+ document.getElementById('root').append(h1)
 
 //  JSX is JavaScript XML was created to use with React to be able to write HTML directly in JavaScript
 // JSX creates a JavaScript object that is then passed to React to render as HTML
 //const jsxElement = <h1 className="header">This is JSX</h1>
 //console.log(jsxElement)
 // Some differences are using className instead of class
+
+const page1 = 
+    <div>
+        <h1>This Element was composed as a JSX Element</h1>
+        <h1>JSX Elements are the simplest type of React Components</h1>
+        <ul>
+            <li>JSX allows declarative writting of HTML in JavaScript</li>
+            <li>JSX was developed by the React Team</li>
+        </ul>
+    </div>
+
+ReactDOM.render(
+    <div>
+      <Navbar />
+      <MainContent />
+      <SimpleComponent />
+      {page}
+      {page1}
+    </div>,
+    document.getElementById('root')
+  );
