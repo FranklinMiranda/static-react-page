@@ -33,10 +33,14 @@ const SimpleComponent = () => {
   );
 };
 
+// This JSX element can be rendered inserting it into the render method using {} curly brackets
+const page = <h1>This is a JSX Element</h1>
+
 ReactDOM.render(
   <div>
     <MainContent />
     <SimpleComponent />
+    {page}
   </div>,
   document.getElementById('root')
 );
